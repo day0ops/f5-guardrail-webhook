@@ -1,0 +1,39 @@
+#### OS Generated ####
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+#### IDE ####
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+*.swp
+*.swo
+*~
+
+#### Project build artifacts ####
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+_output/
+_build/
+dist/
+build/
+/bin/
+/f5-guardrail-webhook
