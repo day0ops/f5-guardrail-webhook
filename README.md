@@ -53,3 +53,7 @@ go vet ./...
 go test ./... -race
 go build ./cmd/f5-guardrail-webhook
 ```
+
+## Releases
+
+Trigger a release with `gh workflow run release.yml -f bump_type=patch` (or `minor`/`major`), or via the GitHub Actions UI. The workflow computes the next semver tag from the latest existing tag, creates that tag and a GitHub Release, builds and pushes a multi-arch image (`linux/amd64`, `linux/arm64`) to `australia-southeast1-docker.pkg.dev/field-engineering-apac/kasunt/f5-guardrail-webhook` tagged with the version and `latest`, then appends the image location to the release notes. Requires repo secrets `WIF_PROVIDER` and `WIF_SERVICE_ACCOUNT`. CI must have passed for the commit being released.
